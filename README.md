@@ -32,7 +32,7 @@ docker run --detach --privileged \
   vantaworks/docker-debian10-ansible:latest
 ```
 
-__Replace `<role_under_test>` with the name of your role.__
+_Replace `<role_under_test>` with the name of your role._
 
 3. Execute `ansible-playbook` thusly: 
 ```

@@ -19,10 +19,10 @@ Upstream images will be provided automatically; however, for manual builds, the 
 Usage
 -----
 
-These steps are only required if manual, one-off
+These steps are only required if manual, one-off testing is used.
 
 1. Pull the image (skip if you manually built it): `docker pull vantaworks/docker-debian10-ansible:latest`
-2. Running the image:
+2. Run the container:
 
 ```
 docker run --detach --privileged \

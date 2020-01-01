@@ -24,7 +24,7 @@ Manual Usage
 
 These steps are only required if manual, one-off testing is used.
 
-1. Pull the image (skip if you manually built it): `docker pull vantaworks/docker-debian10-ansible:latest`
+1. Pull the image (skip if you manually built it): `docker pull thisisvantaworks/debian10-ansible:latest`
 2. Run the container:
 
 ```
@@ -32,7 +32,7 @@ docker run --detach --privileged \
   --name docker-debian10-ansible \
   --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro \
   --volume=`pwd`:/etc/ansible/roles/<role_under_test>:ro \
-  vantaworks/docker-debian10-ansible:latest
+  thisisvantaworks/debian10-ansible:latest
 ```
 
 _Replace `<role_under_test>` with the name of your role._
@@ -47,7 +47,7 @@ docker exec -it docker-debian10-ansible \
 
 Automated Build + Sanity Checks
 -------------------------------
-Build the container, and perform the supplied sanity checks by using the  all` make target. This is the proceedure used by automated builds to verify the container's functionality.
+Build the container, and perform the supplied sanity checks by using the `all` make target. This is the proceedure used by automated builds to verify the container's functionality.
 
 ```
 make all

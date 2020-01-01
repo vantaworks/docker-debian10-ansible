@@ -1,5 +1,8 @@
 Ansible Test Image - Debian 10 (Buster)
 =======================================
+
+[![Build Status](https://travis-ci.com/vantaworks/docker-debian10-ansible.svg?branch=master)](https://travis-ci.com/vantaworks/docker-debian10-ansible)
+
 This Docker container serves as a isolated testing environment for the development of Ansible roles and Playbooks and is part of a suite Docker images for that purpose. The primary use case is for [Molecule](https://molecule.readthedocs.io/en/stable/) testing. __It is not intended for production applications__.  
 
 Included Ansible developement tools

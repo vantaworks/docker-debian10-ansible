@@ -8,4 +8,4 @@ before_install:
 
 # Build it, use it... break it?
 script:
-  - make test
+  - make all

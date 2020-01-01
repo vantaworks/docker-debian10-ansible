@@ -14,10 +14,10 @@ Manual Build
 Upstream images will be provided automatically; however, for manual builds, the only pre-requisite is Docker installed on your system and a local checkout of this repo.
 
 1. `cd` to you local checkout of this repo
-2. Run `docker build -t ddocker-debian10-ansible .`
+2. Run `docker build -t docker-debian10-ansible` or `make dist`
 
-Usage
------
+Manual Usage
+------------
 
 These steps are only required if manual, one-off testing is used.
 
@@ -40,6 +40,14 @@ docker exec -it docker-debian10-ansible \
   env TERM=xterm \
   ansible-playbook /path/to/ansible/playbook.yml \
   --syntax-check
+```
+
+Automated Build + Sanity Checks
+-------------------------------
+Build the container, and perform the supplied sanity checks by using the  all` make target. This is the proceedure used by automated builds to verify the container's functionality.
+
+```
+make all
 ```
 
 Recommendations

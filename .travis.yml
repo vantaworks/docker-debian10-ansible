@@ -12,7 +12,7 @@ script:
 
 notifications:
   webhooks:
-    # if: type = cron
+    if: type = cron
     on_success: always
     on_failure: never
     url:

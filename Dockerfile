@@ -8,23 +8,23 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        sudo \
        systemd \
+       systemd-sysv \
        build-essential \
+       ca-cacert \
        wget \
        libffi-dev \
        libssl-dev \
-       python-pip \
-       python-dev \
-       python-setuptools \
-       python-wheel \
+       python3-pip \
+       python3-dev \
+       python3-setuptools \
+       python3-wheel \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc \
     && rm -Rf /usr/share/man \
-    && apt-get clean \
-    && wget https://bootstrap.pypa.io/get-pip.py \
-    && python get-pip.py
+    && apt-get clean
 
 # Install `pip` dependencies
-RUN pip install \
+RUN pip3 install \
     wheel \
     cryptography \
     ansible \
